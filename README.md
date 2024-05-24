@@ -1,4 +1,4 @@
-# Three.js-Boilerplate-TS-Vite
+# THREEE JS BOILERPLATE PROJECT
 
 A Three.js Boilerplate for TypeScript Vite projects.
 
