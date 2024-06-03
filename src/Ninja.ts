@@ -18,10 +18,9 @@ export default class Ninja extends Group {
 
   async init(animationActions: { [key: string]: AnimationAction }) {
     try{
-    const [ninja,idle,run, jump, pose] = await Promise.all([
+    const [ninja,idle, jump, pose] = await Promise.all([
       this.glTFLoader.loadAsync('models/ninja$@walk.glb'),
       this.glTFLoader.loadAsync('models/ninja@idle.glb'),
-      this.glTFLoader.loadAsync('models/ninja@run.glb'),
       this.glTFLoader.loadAsync('models/ninja@jump.glb'),
       this.glTFLoader.loadAsync('models/ninja@pose.glb'),
     ]);

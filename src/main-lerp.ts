@@ -22,11 +22,6 @@ import { RGBELoader } from 'three/addons/loaders/RGBELoader.js'
 import Stats from 'three/addons/libs/stats.module.js'
 import Pickable from './models/Pickable'
 
-function lerp(from: number, to: number, speed: number) {
-  const amount = (1 - speed) * from + speed * to
-  return Math.abs(from - to) < 0.001 ? to : amount
-}
-
 const scene = new Scene()
 
 const spotLight = new SpotLight(0xffffff, 500)
@@ -74,10 +69,10 @@ renderer.domElement.addEventListener('dblclick', (e) => {
 
   raycaster.setFromCamera(mouse, camera)
 
-  const intersects = raycaster.intersectObjects([suzanne, plane], false)
+  // const intersects = raycaster.intersectObjects([suzanne, plane], false)
 
   if (intersects.length) {
-    const p = intersects[0].point
+    // const p = intersects[0].point
 
     //controls.target.set(p.x, p.y, p.z)
 
